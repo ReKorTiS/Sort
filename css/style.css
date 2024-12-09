@@ -1,0 +1,83 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: OpenSans;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+section h2 { 
+    border-bottom: 1px solid gray;
+    padding: 20px 0;
+}
+select, input, button {
+ height: 40px;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color:black
+}
+a:hover {
+    color:brown
+}
+.wrapper {
+    padding: 0 10%;
+}
+section {
+    padding: 40px 0;
+    display: grid;
+    row-gap: 20px;
+}
+section ul {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+section article {
+    border: 1px solid gray;
+    padding: 10px;
+    display: grid;
+    row-gap: 10px;
+}
+
+section article p {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+section article p span {
+    justify-self: end;
+    font-weight: bold;
+}
+section .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px ;
+}
+@media screen and (max-width:800px){
+    section .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:412px){
+    h2 {
+        color: red;
+    }
+    section .container {
+        grid-template-columns: 1fr;
+    }
+    .wrapper {
+        padding: 0 1%;
+    }
+}
+
